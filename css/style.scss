@@ -1,0 +1,16 @@
+$grey:#404040;
+
+body {
+	background-color: red;
+}
+
+
+#header {
+
+}
+#footer {
+	background-color: $grey;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
