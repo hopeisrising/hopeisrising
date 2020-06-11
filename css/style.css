@@ -29,6 +29,22 @@ body {
   height: 100vh;
 }
 
+@media only screen and (min-width: 1000px) {
+  #hope {
+    padding-top: 20vh;
+    font-size: 10rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #hope {
+    padding-top: 20vh;
+    font-size: 5rem;
+    text-align: center;
+  }
+}
+
 .container {
   -webkit-animation: TEXT_APPEAR 3s;
           animation: TEXT_APPEAR 3s;
@@ -40,12 +56,6 @@ body {
   color: #10A89E;
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
-}
-
-#hope {
-  margin-top: 20vh;
-  font-size: 10rem;
-  text-align: center;
 }
 
 #date {

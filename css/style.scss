@@ -7,13 +7,28 @@ $accent:#10A89E;
 	30% {opacity: 0;}
 	100% {opacity: 1;}
 }
-
 body {
 	background-color: $white;
 	font-family: 'Fjalla One', sans-serif;
 	color: $grey;
 	height: 100vh;
 }
+
+@media only screen and (min-width: 1000px) {
+	#hope {
+		padding-top: 20vh;
+		font-size: 10rem;
+		text-align: center;
+	}	
+}
+@media only screen and (max-width: 1000px) {
+	#hope {
+		padding-top: 20vh;
+		font-size: 5rem;
+		text-align: center;
+	}
+}
+
 .container {
 	animation: TEXT_APPEAR 3s;
 	transition: .5s;
@@ -23,11 +38,7 @@ body {
 	transform: scale(1.04);
 
 }
-#hope {
-	margin-top: 20vh;
-	font-size: 10rem;
-	text-align: center;
-}
+
 #date {
 	text-align: center;
 }
