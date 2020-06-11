@@ -1,11 +1,30 @@
 body {
-  background-color: red;
+  background-color: #ffffff;
+  font-family: 'Fjalla One', sans-serif;
+  color: #404040;
+  height: 100vh;
 }
 
-#footer {
-  background-color: #404040;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.container {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.container:hover {
+  opacity: .5;
+}
+
+#hope {
+  margin-top: 20vh;
+  font-size: 10rem;
+  text-align: center;
+}
+
+#date {
+  text-align: center;
+}
+
+#details {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

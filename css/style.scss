@@ -1,16 +1,26 @@
 $grey:#404040;
+$white: #ffffff;
 
 body {
-	background-color: red;
+	background-color: $white;
+	font-family: 'Fjalla One', sans-serif;
+	color: $grey;
+	height: 100vh;
 }
-
-
-#header {
-
+.container {
+	transition: .5s;
 }
-#footer {
-	background-color: $grey;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+.container:hover {
+	opacity: .5;
+}
+#hope {
+	margin-top: 20vh;
+	font-size: 10rem;
+	text-align: center;
+}
+#date {
+	text-align: center;
+}
+#details {
+	text-align: center;
 }
