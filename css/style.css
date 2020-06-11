@@ -11,7 +11,9 @@ body {
 }
 
 .container:hover {
-  opacity: .5;
+  color: #10A89E;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 #hope {

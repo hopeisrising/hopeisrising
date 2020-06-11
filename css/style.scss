@@ -1,5 +1,6 @@
 $grey:#404040;
-$white: #ffffff;
+$white:#ffffff;
+$accent:#10A89E;
 
 body {
 	background-color: $white;
@@ -11,7 +12,9 @@ body {
 	transition: .5s;
 }
 .container:hover {
-	opacity: .5;
+	color: $accent;
+	transform: scale(1.04);
+
 }
 #hope {
 	margin-top: 20vh;
