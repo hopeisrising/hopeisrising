@@ -10,6 +10,22 @@
         />
         <title>Hope Is Rising</title>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                document.body.classList.add("js-loading");
+                window.addEventListener("load", showPage);
+                function showPage() {
+                    document.body.classList.remove("js-loading");
+                }
+            });
+        </script>
+
+        <style>
+            .js-loading * {
+                animation-play-state: paused !important;
+            }
+        </style>
+
       
         <link
             rel="stylesheet"

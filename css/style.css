@@ -1,3 +1,27 @@
+@-webkit-keyframes TEXT_APPEAR {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes TEXT_APPEAR {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   background-color: #ffffff;
   font-family: 'Fjalla One', sans-serif;
@@ -6,6 +30,8 @@ body {
 }
 
 .container {
+  -webkit-animation: TEXT_APPEAR 3s;
+          animation: TEXT_APPEAR 3s;
   -webkit-transition: .5s;
   transition: .5s;
 }

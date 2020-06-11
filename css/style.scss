@@ -2,6 +2,12 @@ $grey:#404040;
 $white:#ffffff;
 $accent:#10A89E;
 
+@keyframes TEXT_APPEAR {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
 body {
 	background-color: $white;
 	font-family: 'Fjalla One', sans-serif;
@@ -9,6 +15,7 @@ body {
 	height: 100vh;
 }
 .container {
+	animation: TEXT_APPEAR 3s;
 	transition: .5s;
 }
 .container:hover {
