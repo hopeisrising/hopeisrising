@@ -1,16 +1,47 @@
 $grey:#404040;
+$white:#ffffff;
+$accent:#10A89E;
 
+@keyframes TEXT_APPEAR {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 1;}
+}
 body {
-	background-color: red;
+	background-color: $white;
+	font-family: 'Fjalla One', sans-serif;
+	color: $grey;
+	height: 100vh;
 }
 
+@media only screen and (min-width: 1000px) {
+	#hope {
+		padding-top: 20vh;
+		font-size: 10rem;
+		text-align: center;
+	}	
+}
+@media only screen and (max-width: 1000px) {
+	#hope {
+		padding-top: 20vh;
+		font-size: 5rem;
+		text-align: center;
+	}
+}
 
-#header {
+.container {
+	animation: TEXT_APPEAR 3s;
+	transition: .5s;
+}
+.container:hover {
+	color: $accent;
+	transform: scale(1.04);
 
 }
-#footer {
-	background-color: $grey;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+
+#date {
+	text-align: center;
+}
+#details {
+	text-align: center;
 }
