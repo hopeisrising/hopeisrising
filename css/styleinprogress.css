@@ -44,6 +44,9 @@ body a:hover {
     width: 100%;
     z-index: 100;
   }
+  #header a {
+    font-size: 2rem;
+  }
   #home {
     position: relative;
     height: 100vh;
@@ -82,16 +85,16 @@ body a:hover {
   }
   #about #vision {
     display: block;
-    max-width: 1000px;
-    padding: 20rem 10rem;
+    width: 1000px;
+    padding: 20rem 0;
     margin: auto;
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 2.5rem;
     -webkit-transform: skew(0deg, 10deg);
             transform: skew(0deg, 10deg);
   }
   #about #vision p {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   #featured {
     padding-top: -10rem;
@@ -170,26 +173,49 @@ body a:hover {
     color: #414141;
     text-decoration: none;
   }
-  #location {
+  #map {
     padding-top: 10rem;
     min-height: 80vh;
     display: block;
-    max-width: 1000px;
+    width: 600px;
     margin: auto;
   }
-  #location #map {
+  #map #address {
+    margin-bottom: 2rem;
+  }
+  #map #google-map {
     text-align: center;
   }
-  #location #map div {
+  #map #google-map div {
     display: inline-block;
   }
   #sponsors {
-    display: block;
     max-width: 1000px;
-    margin: auto;
+    margin: 5rem auto;
+  }
+  #sponsors .myrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: horizontal;
+            flex-direction: horizontal;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #sponsors img {
+    height: 5rem;
   }
   #footer {
     background-color: #414141;
+    color: #ffffff;
+  }
+  #footer .myrow {
+    width: 1000px;
+    margin: auto;
+    line-height: 4rem;
   }
 }
 

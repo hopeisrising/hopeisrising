@@ -28,6 +28,9 @@ body {
 		position: fixed;
 		width: 100%;
 		z-index: 100;
+		a {
+			font-size: 2rem;
+		}
 	}
 	#home {
 		position: relative;
@@ -61,14 +64,14 @@ body {
 		}
 		#vision {
 			display: block;
-			max-width: 1000px;;
-			padding: 20rem 10rem;
+			width: 1000px;
+			padding: 20rem 0;
 			margin: auto;
 			color: $white;
-			font-size: 2rem;
+			font-size: 2.5rem;
 			transform: skew(0deg, 10deg);
 			p {
-				font-size: 1.5rem;
+				font-size: 2.5rem;
 			}
 
 		}
@@ -142,13 +145,16 @@ body {
 			text-decoration: none;
 		}
 	}
-	#location {
+	#map {
 		padding-top: 10rem;
 		min-height: 80vh;
 		display: block;
-		max-width: 1000px;
+		width: 600px;
 		margin: auto;
-		#map {
+		#address {
+			margin-bottom: 2rem;
+		}
+		#google-map {
 			text-align: center;
 			div {
 				display: inline-block;
@@ -156,12 +162,25 @@ body {
 		}
 	}
 	#sponsors {
-		display: block;
 		max-width: 1000px;
-		margin: auto;
+		margin: 5rem auto;
+		.myrow {
+			display: flex;
+			flex-direction: horizontal;
+			justify-content: space-between;
+		}
+		img {
+			height: 5rem;
+		}
 	}
 	#footer {
 		background-color: $grey;
+		.myrow {
+			width: $breakpoint;
+			margin: auto;
+			line-height: 4rem;
+		}
+		color: $white;
 	}	
 }
 @media only screen and (max-width: 1000px) {
