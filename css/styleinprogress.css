@@ -27,8 +27,25 @@ body {
   color: #404040;
 }
 
+body p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
 @media only screen and (min-width: 1000px) {
-  #hope {
+  #header {
+    background-color: #404040;
+  }
+  #home {
+    position: relative;
+    height: 100vh;
+    vertical-align: middle;
+    -webkit-animation: TEXT_APPEAR 3s;
+            animation: TEXT_APPEAR 3s;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  #home #hope {
     position: absolute;
     width: 1000px;
     top: 50%;
@@ -36,17 +53,70 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     display: block;
-    vertical-align: middle;
     font-size: 10rem;
     text-align: center;
     -webkit-transition: .5s;
     transition: .5s;
   }
-  #hope:hover {
+  #home #hope:hover {
     color: #10A89E;
   }
-  #header {
-    background-color: #404040;
+  #about {
+    position: relative;
+    min-height: 100vh;
+  }
+  #about #skew {
+    margin: 20vh 0;
+    background-color: #10A89E;
+    -webkit-transform: skew(0deg, -10deg);
+            transform: skew(0deg, -10deg);
+  }
+  #about #vision {
+    display: block;
+    max-width: 1000px;
+    padding: 20rem 10rem;
+    margin: auto;
+    color: #ffffff;
+    font-size: 2rem;
+    -webkit-transform: skew(0deg, 10deg);
+            transform: skew(0deg, 10deg);
+  }
+  #about #vision p {
+    font-size: 1.5rem;
+  }
+  #featured {
+    min-height: 100vh;
+  }
+  #featured .myrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: horizontal;
+            flex-direction: horizontal;
+    padding: 8rem 0;
+    margin: 5rem;
+  }
+  #featured .mycard {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin: 0 1rem;
+  }
+  #featured .mycard img {
+    width: 100%;
+  }
+  #featured .mycard .name {
+    margin: .5rem 1rem 0 1rem;
+  }
+  #featured .mycard:hover {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  #featured .feature-description {
+    padding: 2px 16px;
   }
   #footer {
     background-color: #404040;
@@ -59,23 +129,5 @@ body {
     font-size: 5rem;
     text-align: center;
   }
-}
-
-.content {
-  position: relative;
-  height: 100vh;
-  vertical-align: middle;
-  -webkit-animation: TEXT_APPEAR 3s;
-          animation: TEXT_APPEAR 3s;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-#date {
-  text-align: center;
-}
-
-#details {
-  text-align: center;
 }
 /*# sourceMappingURL=styleinprogress.css.map */

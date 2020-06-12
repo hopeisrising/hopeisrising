@@ -1,5 +1,6 @@
-$grey:#404040;
+$black:#000000;
 $white:#ffffff;
+$grey:#404040;
 $accent:#10A89E;
 $breakpoint:1000px;
 
@@ -11,26 +12,98 @@ $breakpoint:1000px;
 body {
 	font-family: 'Fjalla One', sans-serif;
 	color: $grey;
+	p {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1rem;
+	}
 }
 
 @media only screen and (min-width: $breakpoint) {
-	#hope {
-		position: absolute;
-		width: $breakpoint;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		display: block;
-		vertical-align: middle;
-		font-size: 10rem;
-		text-align: center;
-		transition: .5s;
-	}
-	#hope:hover {
-		color: $accent;
-	}
 	#header {
 		background-color: $grey;
+	}
+	#home {
+		position: relative;
+		height: 100vh;
+		vertical-align: middle;
+		animation: TEXT_APPEAR 3s;
+		transition: .5s;
+		#hope {
+			position: absolute;
+			width: $breakpoint;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: block;
+			font-size: 10rem;
+			text-align: center;
+			transition: .5s;
+		}
+		#hope:hover {
+			color: $accent;
+		}
+	}
+	#about {
+		position: relative;
+		min-height: 100vh;
+		#skew{
+			margin: 20vh 0;
+			background-color: $accent;
+			transform: skew(0deg, -10deg);
+		}
+		#vision {
+			display: block;
+			max-width: 1000px;;
+			padding: 20rem 10rem;
+			margin: auto;
+			color: $white;
+			font-size: 2rem;
+			transform: skew(0deg, 10deg);
+			p {
+				font-size: 1.5rem;
+			}
+
+		}
+
+	}
+	#featured {
+		
+		min-height: 100vh;
+		.myrow {
+			display: flex;
+			flex-direction: horizontal;
+			padding: 8rem 0;
+			margin: 5rem;
+		}
+		.mycard {
+			box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			margin: 0 1rem;
+			img {
+				width: 100%;
+			}
+			.name {
+				margin: .5rem 1rem 0 1rem;
+			}
+		}
+		.mycard:hover {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		}
+		.feature-description {
+			padding: 2px 16px;
+		}
+	}
+	#logistics {
+
+	}
+	#tickets {
+
+	}
+	#location {
+
+	}
+	#sponsors {
+
 	}
 	#footer {
 		background-color: $grey;
@@ -44,17 +117,3 @@ body {
 	}
 }
 
-.content {
-	position: relative;
-	height: 100vh;
-	vertical-align: middle;
-	animation: TEXT_APPEAR 3s;
-	transition: .5s;
-}
-
-#date {
-	text-align: center;
-}
-#details {
-	text-align: center;
-}
