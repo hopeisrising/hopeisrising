@@ -1,0 +1,60 @@
+$grey:#404040;
+$white:#ffffff;
+$accent:#10A89E;
+$breakpoint:1000px;
+
+@keyframes TEXT_APPEAR {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 1;}
+}
+body {
+	font-family: 'Fjalla One', sans-serif;
+	color: $grey;
+}
+
+@media only screen and (min-width: $breakpoint) {
+	#hope {
+		position: absolute;
+		width: $breakpoint;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: block;
+		vertical-align: middle;
+		font-size: 10rem;
+		text-align: center;
+		transition: .5s;
+	}
+	#hope:hover {
+		color: $accent;
+	}
+	#header {
+		background-color: $grey;
+	}
+	#footer {
+		background-color: $grey;
+	}	
+}
+@media only screen and (max-width: 1000px) {
+	#hope {
+		padding-top: 20vh;
+		font-size: 5rem;
+		text-align: center;
+	}
+}
+
+.content {
+	position: relative;
+	height: 100vh;
+	vertical-align: middle;
+	animation: TEXT_APPEAR 3s;
+	transition: .5s;
+}
+
+#date {
+	text-align: center;
+}
+#details {
+	text-align: center;
+}
