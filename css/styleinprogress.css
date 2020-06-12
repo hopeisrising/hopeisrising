@@ -24,17 +24,25 @@
 
 body {
   font-family: 'Fjalla One', sans-serif;
-  color: #404040;
+  font-size: 2rem;
+  color: #414141;
 }
 
 body p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+body a:hover {
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1000px) {
   #header {
-    background-color: #404040;
+    background-color: #414141;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
   }
   #home {
     position: relative;
@@ -59,15 +67,16 @@ body p {
     transition: .5s;
   }
   #home #hope:hover {
-    color: #10A89E;
+    color: #0fA89E;
   }
   #about {
     position: relative;
     min-height: 100vh;
+    padding-top: -60rem;
   }
   #about #skew {
     margin: 20vh 0;
-    background-color: #10A89E;
+    background-color: #0fA89E;
     -webkit-transform: skew(0deg, -10deg);
             transform: skew(0deg, -10deg);
   }
@@ -85,6 +94,7 @@ body p {
     font-size: 1.5rem;
   }
   #featured {
+    padding-top: -10rem;
     min-height: 100vh;
   }
   #featured .myrow {
@@ -117,9 +127,69 @@ body p {
   }
   #featured .feature-description {
     padding: 2px 16px;
+    font-size: 1rem;
+  }
+  #logistics {
+    min-height: 60vh;
+    display: block;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 10rem;
+  }
+  #tickets {
+    padding-top: 10rem;
+    min-height: 60vh;
+    display: block;
+    max-width: 1000px;
+    margin: auto;
+  }
+  #tickets #eventbrite {
+    display: block;
+    width: 22rem;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: .2s;
+    transition: .2s;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 4rem;
+    color: #414141;
+    margin: auto;
+  }
+  #tickets #eventbrite img {
+    display: inline-block;
+    height: 4rem;
+  }
+  #tickets #eventbrite div {
+    display: block;
+    padding: .2rem 1.5rem;
+  }
+  #tickets #eventbrite:hover {
+    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    color: #414141;
+    text-decoration: none;
+  }
+  #location {
+    padding-top: 10rem;
+    min-height: 80vh;
+    display: block;
+    max-width: 1000px;
+    margin: auto;
+  }
+  #location #map {
+    text-align: center;
+  }
+  #location #map div {
+    display: inline-block;
+  }
+  #sponsors {
+    display: block;
+    max-width: 1000px;
+    margin: auto;
   }
   #footer {
-    background-color: #404040;
+    background-color: #414141;
   }
 }
 

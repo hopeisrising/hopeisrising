@@ -1,7 +1,7 @@
 $black:#000000;
 $white:#ffffff;
-$grey:#404040;
-$accent:#10A89E;
+$grey:#414141;
+$accent:#0fA89E;
 $breakpoint:1000px;
 
 @keyframes TEXT_APPEAR {
@@ -11,16 +11,23 @@ $breakpoint:1000px;
 }
 body {
 	font-family: 'Fjalla One', sans-serif;
+	font-size: 2rem;
 	color: $grey;
 	p {
 		font-family: 'Open Sans', sans-serif;
-		font-size: 1rem;
+		font-size: 1.5rem;
+	}
+	a:hover {
+		text-decoration: none;
 	}
 }
 
 @media only screen and (min-width: $breakpoint) {
 	#header {
 		background-color: $grey;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
 	}
 	#home {
 		position: relative;
@@ -46,6 +53,7 @@ body {
 	#about {
 		position: relative;
 		min-height: 100vh;
+		padding-top: -60rem;
 		#skew{
 			margin: 20vh 0;
 			background-color: $accent;
@@ -67,7 +75,7 @@ body {
 
 	}
 	#featured {
-		
+		padding-top: -10rem;
 		min-height: 100vh;
 		.myrow {
 			display: flex;
@@ -91,19 +99,66 @@ body {
 		}
 		.feature-description {
 			padding: 2px 16px;
+			font-size: 1rem;
 		}
 	}
 	#logistics {
-
+		min-height: 60vh;
+		display: block;
+		max-width: 1000px;
+		margin: auto;
+		padding-top: 10rem;
 	}
 	#tickets {
-
+		padding-top: 10rem;
+		min-height: 60vh;
+		display: block;
+		max-width: 1000px;
+		margin: auto;
+		#eventbrite {
+			display: block;
+			width: 22rem;
+			box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+			transition: .2s;
+			border-radius: 20px;
+			overflow: hidden;
+			font-size: 4rem;
+			color: $grey;
+			margin: auto;
+			
+			img {
+				display: inline-block;
+				height: 4rem;
+				
+			}
+			div {
+				display: block;
+				padding: .2rem 1.5rem;
+			}
+		}
+		#eventbrite:hover {
+			box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+			color: $grey;
+			text-decoration: none;
+		}
 	}
 	#location {
-
+		padding-top: 10rem;
+		min-height: 80vh;
+		display: block;
+		max-width: 1000px;
+		margin: auto;
+		#map {
+			text-align: center;
+			div {
+				display: inline-block;
+			}
+		}
 	}
 	#sponsors {
-
+		display: block;
+		max-width: 1000px;
+		margin: auto;
 	}
 	#footer {
 		background-color: $grey;
