@@ -119,12 +119,12 @@ html {
 	transition: .5s;
 	#hope {
 		.spray {
-			background: linear-gradient($yellow, $yellow), url(../images/spray.jpg);
+			background: linear-gradient($yellow, $yellow), url(../images/Spray.jpg);
 			background-blend-mode: multiply;
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
-			color: yellow;
+			color: $yellow;
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 			background-clip: text;

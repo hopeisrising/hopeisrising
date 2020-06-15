@@ -141,13 +141,13 @@ html .active {
 }
 
 #home #hope .spray {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ceff22), to(#ceff22)), url(../images/spray.jpg);
-  background: linear-gradient(#ceff22, #ceff22), url(../images/spray.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ceff22), to(#ceff22)), url(../images/Spray.jpg);
+  background: linear-gradient(#ceff22, #ceff22), url(../images/Spray.jpg);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color: yellow;
+  color: #ceff22;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
