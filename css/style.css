@@ -8,6 +8,7 @@ body {
 body p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 body a {
@@ -68,6 +69,34 @@ html .active {
   margin: .5rem;
 }
 
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  color: red;
+}
+
+.topnav .icon {
+  display: none;
+}
+
 #hero {
   display: block;
   height: 100vh;
@@ -78,6 +107,15 @@ html .active {
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -100;
+}
+
+.section {
+  padding: 1rem;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
 }
 
 #home {
@@ -115,88 +153,30 @@ html .active {
   background-clip: text;
 }
 
-#home #hope h2 {
-  font-size: 15.3rem;
-  margin: 0;
-}
-
-#home #hope h1 {
-  font-size: 18rem;
-  margin: -10.5rem 0 0 0;
-}
-
 #home #hope:hover {
   color: #0fA89E;
 }
 
 #about {
   position: relative;
-  min-height: 100vh;
-  padding-top: 0rem;
-}
-
-#about #skew {
-  margin: 0 0;
+  padding: 10rem 1rem;
   background-color: rgba(0, 0, 0, 0.623);
-  -webkit-transform: skew(0deg, 0deg);
-          transform: skew(0deg, 0deg);
 }
 
 #about #vision {
   display: block;
-  padding: 10rem 0;
-  margin: auto;
   color: #ffffff;
-  font-size: 2.5rem;
-  -webkit-transform: skew(0deg, 0deg);
-          transform: skew(0deg, 0deg);
-}
-
-#about #vision p {
-  font-size: 2.5rem;
 }
 
 #featured {
-  padding-top: -10rem;
-  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
+  padding-top: 5rem;
 }
 
 #featured .myrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 8rem 0;
-  margin: 1rem;
-}
-
-#featured .mycard {
-  opacity: 1;
-  background-color: #ffffff;
-  color: #414141;
-  -webkit-box-shadow: 0 0 0 0 black;
-          box-shadow: 0 0 0 0 black;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin: 0 1rem;
-}
-
-#featured .mycard img {
-  opacity: 1;
-  width: 100%;
-}
-
-#featured .mycard .name {
-  margin: .5rem 1rem 0 1rem;
-}
-
-#featured .mycard:hover {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #featured .feature-description {
@@ -204,25 +184,40 @@ html .active {
   font-size: 1rem;
 }
 
+.mycard {
+  background-color: #ffffff;
+  color: #414141;
+  margin: 1rem 0;
+}
+
+.mycard img {
+  width: 100%;
+}
+
+.mycard .name {
+  margin: .5rem 1rem 0 1rem;
+}
+
 #logistics {
-  min-height: 60vh;
-  display: block;
-  max-width: 1000px;
-  margin: auto;
-  padding-top: 10rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5rem 1rem 5rem 1rem;
+}
+
+#food {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5rem 1rem 5rem 1rem;
 }
 
 #tickets {
-  padding-top: 10rem;
-  min-height: 60vh;
-  display: block;
-  max-width: 1000px;
-  margin: auto;
+  padding: 10rem 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #414141;
 }
 
 #tickets #eventbrite {
   display: block;
   width: 22rem;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: .2s;
@@ -230,8 +225,8 @@ html .active {
   border-radius: 20px;
   overflow: hidden;
   font-size: 4rem;
+  margin: 1rem auto;
   color: #414141;
-  margin: auto;
 }
 
 #tickets #eventbrite img {
@@ -252,42 +247,46 @@ html .active {
 }
 
 #map {
-  padding-top: 10rem;
-  min-height: 80vh;
-  display: block;
-  max-width: 600px;
-  overflow-x: hidden;
-  margin: auto;
+  padding: 5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.623);
 }
 
 #map #address {
-  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 #map #google-map {
+  max-width: 600px;
+  margin: auto;
   text-align: center;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
 
-#map #google-map div {
-  display: inline-block;
+#map #google-map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 #sponsors {
-  max-width: 1000px;
-  margin: 5rem auto;
+  padding: 5rem 1rem;
+  background-color: white;
 }
 
 #sponsors .myrow {
+  max-width: 1000px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #sponsors img {
@@ -304,7 +303,7 @@ html .active {
   line-height: 4rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -312,10 +311,6 @@ html .active {
     float: right;
     display: block;
   }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
   }
@@ -329,38 +324,41 @@ html .active {
     display: block;
     text-align: left;
   }
+  .myrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  h2 {
+    font-size: 5rem;
+    margin: 0;
+  }
+  h1 {
+    font-size: 6rem;
+    margin: -5rem 0 0 0;
+  }
 }
 
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 15.3rem;
+    margin: 0;
+  }
+  h1 {
+    font-size: 18rem;
+    margin: -10.5rem 0 0 0;
+  }
+  .mycard {
+    margin: 1rem;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .mycard:hover {
+    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  }
 }
 /*# sourceMappingURL=style.css.map */

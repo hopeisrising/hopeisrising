@@ -4,6 +4,7 @@ $grey:#414141;
 $accent:#0fA89E;
 $yellow:#ceff22;
 $breakpoint:1000px;
+$red:red;
 
 
 // @keyframes TEXT_APPEAR {
@@ -20,6 +21,7 @@ body {
 	p {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 1.5rem;
+		margin: 0;
 	}
 	a {
 		text-decoration: none;
@@ -38,268 +40,40 @@ body {
 
 }
 
-@media only screen and (min-width: $breakpoint) {}
-	html {
-		// overflow: hidden;
-		.active {
-			color: red;
-		}
-
+html {
+	.active {
+		color: red;
 	}
-	#header {
-		background-color: $grey;
-		position: fixed;
-		display: block;
-		justify-content: space-between;
-		top: 0;
-		width: 100%;
-		z-index: 100;
-		box-shadow: 0 0 2rem 0rem rgba(0,0,0,1);
+
+}
+#header {
+	background-color: $grey;
+	position: fixed;
+	display: block;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 0 2rem 0rem rgba(0,0,0,1);
+	a {
+		font-size: 2rem;
+	}
+	.navbar-brand {
+		margin: .5rem;
+	}
+	.navbar-nav {
+		display: flex;
+		flex-direction: column;
 		a {
-			font-size: 2rem;
-		}
-		.navbar-brand {
 			margin: .5rem;
 		}
-		.navbar-nav {
-			display: flex;
-			flex-direction: column;
-			a {
-				margin: .5rem;
-			}
-		}
 	}
-	#hero {
-		display: block;
-		height: 100vh;
-		width: 100vw;
-		position: fixed;
-		background-image: url("../images/hero.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-		z-index: -100;
-	}
-	#home {
-		position: relative;
-		height: 100vh;
-		vertical-align: middle;
-		overflow-x: hidden;
-		// animation: TEXT_APPEAR 3s;
-		transition: .5s;
-		#hope {
-			.spray {
-				background: linear-gradient($yellow, $yellow), url(../images/spray.jpg);
-				background-blend-mode: multiply;
-				background-repeat: no-repeat;
-				background-position: center center;
-				background-size: cover;
-				color: yellow;
-				-webkit-text-fill-color: transparent;
-				-webkit-background-clip: text;
-				background-clip: text;
-
-			}
-			h2 {
-				font-size: 15.3rem;
-				margin: 0;
-			}
-			h1 {
-				font-size: 18rem;
-				margin: -10.5rem 0 0 0;
-			}
-			font-family: 'Roboto', sans-serif;
-			position: absolute;
-			// width: $breakpoint;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			display: block;
-			text-align: center;
-			transition: .5s;
-		}
-		#hope:hover {
-			color: $accent;
-		}
-	}
-	#about {
-		position: relative;
-		min-height: 100vh;
-		padding-top: 0rem;
-		#skew{
-			margin: 0 0;
-			background-color: rgba(0, 0, 0, 0.623);
-			transform: skew(0deg, 0deg);
-		}
-		#vision {
-			display: block;
-			// width: 1000px;
-			padding: 10rem 0;
-			margin: auto;
-			color: $white;
-			font-size: 2.5rem;
-			transform: skew(0deg, 0deg);
-			p {
-				font-size: 2.5rem;
-			}
-
-		}
-
-	}
-	#featured {
-		padding-top: -10rem;
-		min-height: 100vh;
-		background-color: rgba(255, 255, 255, 0.9);
-		.myrow {
-			display: flex;
-			flex-direction: column;
-			padding: 8rem 0;
-			margin: 1rem;
-		}
-		.mycard {
-			opacity: 1;
-			background-color: $white;
-			color: $grey;
-			box-shadow: 0 0 0 0 rgba(0,0,0,1);
-			transition: 0.3s;
-			margin: 0 1rem;
-			img {
-				opacity: 1;
-				width: 100%;
-			}
-			.name {
-				margin: .5rem 1rem 0 1rem;
-			}
-		}
-		.mycard:hover {
-			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		}
-		.feature-description {
-			padding: 2px 16px;
-			font-size: 1rem;
-		}
-	}
-	#logistics {
-		min-height: 60vh;
-		display: block;
-		max-width: 1000px;
-		margin: auto;
-		padding-top: 10rem;
-	}
-	#tickets {
-		padding-top: 10rem;
-		min-height: 60vh;
-		display: block;
-		max-width: 1000px;
-		margin: auto;
-		#eventbrite {
-			display: block;
-			width: 22rem;
-			box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-			transition: .2s;
-			border-radius: 20px;
-			overflow: hidden;
-			font-size: 4rem;
-			color: $grey;
-			margin: auto;
-			
-			img {
-				display: inline-block;
-				height: 4rem;
-				
-			}
-			div {
-				display: block;
-				padding: .2rem 1.5rem;
-			}
-		}
-		#eventbrite:hover {
-			box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
-			color: $grey;
-			text-decoration: none;
-		}
-	}
-	#map {
-		padding-top: 10rem;
-		min-height: 80vh;
-		display: block;
-		max-width: 600px;
-		overflow-x: hidden;
-		margin: auto;
-		#address {
-			margin-bottom: 2rem;
-		}
-		#google-map {
-			text-align: center;
-			div {
-				display: inline-block;
-			}
-		}
-	}
-	#sponsors {
-		max-width: 1000px;
-		margin: 5rem auto;
-		.myrow {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-		img {
-			height: 5rem;
-		}
-	}
-	#footer {
-		background-color: $grey;
-		.myrow {
-			// width: $breakpoint;
-			margin: auto;
-			line-height: 4rem;
-		}
-		color: $white;
-	}	
-
-// @media only screen and (max-width: 1000px) {
-// 	.navbar-nav {
-// 		display: none;
-// 	}
-// 	// .responsive {
-// 	// 	display: block;
-// 	// }
-// 	// #hope {
-// 	// 	padding-top: 20vh;
-// 	// 	font-size: 5rem;
-// 	// 	text-align: center;
-// 	// }
-// }
-@media screen and (max-width: 600px) {
-	.topnav a:not(:first-child) {display: none;}
-	.topnav a.icon {
-	  float: right;
-	  display: block;
-	}
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-	.topnav.responsive {position: relative;}
-	.topnav.responsive a.icon {
-	  position: absolute;
-	  right: 0;
-	  top: 0;
-	}
-	.topnav.responsive a {
-	  float: none;
-	  display: block;
-	  text-align: left;
-	}
-  }
+}
 .topnav {
 	background-color: #333;
 	overflow: hidden;
   }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+.topnav a {
 	float: left;
 	display: block;
 	color: #f2f2f2;
@@ -307,21 +81,236 @@ body {
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+}
+.topnav a:hover {
 	background-color: #ddd;
 	color: black;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-	background-color: #4CAF50;
-	color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
+}
+.topnav a.active {
+	color: $red;
+}
+.topnav .icon {
 	display: none;
-  }
+}
+#hero {
+	display: block;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	background-image: url("../images/hero.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: -100;
+}
+.section {
+	padding: 1rem;
+}
+.content {
+	max-width: $breakpoint;
+	margin: auto;
+}
+#home {
+	position: relative;
+	height: 100vh;
+	vertical-align: middle;
+	overflow-x: hidden;
+	// animation: TEXT_APPEAR 3s;
+	transition: .5s;
+	#hope {
+		.spray {
+			background: linear-gradient($yellow, $yellow), url(../images/spray.jpg);
+			background-blend-mode: multiply;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			color: yellow;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			background-clip: text;
+
+		}
+
+		font-family: 'Roboto', sans-serif;
+		position: absolute;
+		// width: $breakpoint;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: block;
+		text-align: center;
+		transition: .5s;
+	}
+	#hope:hover {
+		color: $accent;
+	}
+}
+#about {
+	position: relative;
+	padding: 10rem 1rem;
+	background-color: rgba(0, 0, 0, 0.623);
+	#vision {
+		display: block;
+		color: $white;
+
+	}
+
+}
+#featured {
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-top: 5rem;
+	.myrow {
+		display: flex;
+	}
+
+	.feature-description {
+		padding: 2px 16px;
+		font-size: 1rem;
+	}
+}
+.mycard {
+	background-color: $white;
+	color: $grey;
+	margin: 1rem 0;
+	img {
+		width: 100%;
+	}
+	.name {
+		margin: .5rem 1rem 0 1rem;
+	}
+}
+#logistics {
+	background-color: rgba(0,0,0,0.8);
+	padding: 5rem 1rem 5rem 1rem;
+}
+#food {
+	background-color: rgba(0,0,0,0.8);
+	padding: 5rem 1rem 5rem 1rem;
+}
+#tickets {
+	padding: 10rem 1rem;
+	background-color: rgba(255, 255, 255, .9);
+	color: $grey;
+	#eventbrite {
+		display: block;
+		width: 22rem;
+		background-color: $white;
+		box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+		transition: .2s;
+		border-radius: 20px;
+		overflow: hidden;
+		font-size: 4rem;
+		margin: 1rem auto;
+		color: $grey;
+		
+		img {
+			display: inline-block;
+			height: 4rem;
+			
+		}
+		div {
+			display: block;
+			padding: .2rem 1.5rem;
+		}
+	}
+	#eventbrite:hover {
+		box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+		color: $grey;
+		text-decoration: none;
+	}
+}
+#map {
+	padding: 5rem 1rem;
+	background-color: rgba(0, 0, 0, 0.623);
+	#address {
+		max-width: 600px;
+		margin: 2rem auto;
+	}
+	#google-map {
+		max-width: 600px;
+		margin: auto;
+		text-align: center;
+		overflow:hidden;
+		padding-bottom:56.25%;
+		position:relative;
+		height:0;
+		iframe {
+			left:0;
+			top:0;
+			height:100%;
+			width:100%;
+			position:absolute;
+		}
+		
+	}
+}
+#sponsors {
+	padding: 5rem 1rem;
+	background-color: rgba(255, 255, 255, 1);
+	.myrow {
+		max-width: $breakpoint;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+	}
+	img {
+		height: 5rem;
+	}
+}
+#footer {
+	background-color: $grey;
+	.myrow {
+		// width: $breakpoint;
+		margin: auto;
+		line-height: 4rem;
+	}
+	color: $white;
+}	
+
+@media screen and (max-width: $breakpoint) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+	.topnav.responsive {position: relative;}
+	.topnav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.myrow {
+		flex-direction: column;
+	}
+	h2 {
+		font-size: 5rem;
+		margin: 0;
+	}
+	h1 {
+		font-size: 6rem;
+		margin: -5rem 0 0 0;
+	}
+}
+@media screen and (min-width: $breakpoint) {
+	h2 {
+		font-size: 15.3rem;
+		margin: 0;
+	}
+	h1 {
+		font-size: 18rem;
+		margin: -10.5rem 0 0 0;
+	}
+	.mycard {
+		margin: 1rem;
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+		transition: .2s;
+	}
+	.mycard:hover {
+		box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+	}
+}
