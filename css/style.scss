@@ -4,11 +4,12 @@ $grey:#414141;
 $accent:#0fA89E;
 $breakpoint:1000px;
 
-@keyframes TEXT_APPEAR {
-	0% {opacity: 0;}
-	30% {opacity: 0;}
-	100% {opacity: 1;}
-}
+// @keyframes TEXT_APPEAR {
+// 	0% {opacity: 0;}
+// 	30% {opacity: 0;}
+// 	100% {opacity: 1;}
+// }
+
 body {
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 2rem;
@@ -23,9 +24,54 @@ body {
 }
 
 @media only screen and (min-width: $breakpoint) {
+	html {
+		overflow: hidden;
+		.active {
+			color: red;
+		}
+		.navbar-nav {
+			display: flex;
+			flex-direction: horizontal;
+		}
+	}
+	body {
+		height: 100vh;
+		// perspective: 1px;
+		// transform-style: preserve-3d;
+		// overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.parallax-wrapper {
+		width: 100vw;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	// .parallax-wrapper::before {
+	// 	content:"";
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// 	top: 3rem;
+	// 	left: 0;
+	// 	background-image: url("../images/hero.jpg");
+	// 	background-size: cover;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center;
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	transform: translateZ(-1px) scale(2);
+	// }
+	// .regular-wrapper {
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// 	// padding-top: 20vh;
+	// 	// background-image: url("hero.jpg");
+	// 	z-index: 2;
+	// 	position: relative;
+	// }
 	#header {
 		background-color: $grey;
 		position: fixed;
+		top: 0;
 		width: 100%;
 		z-index: 100;
 		a {
@@ -33,23 +79,38 @@ body {
 		}
 	}
 	#home {
-		background-image: url("../images/hero.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
 		position: relative;
 		height: 100vh;
 		vertical-align: middle;
-		animation: TEXT_APPEAR 3s;
+		// animation: TEXT_APPEAR 3s;
 		transition: .5s;
 		#hope {
+			.spray {
+				background: linear-gradient(#e5ff00, #e5ff00), url(../images/spray.jpg);
+				background-blend-mode: multiply;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				color: yellow;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+				background-clip: text;
+
+			}
+			h2 {
+				font-size: 16rem;
+			}
+			h1 {
+				font-size: 18rem;
+				margin-top: -13rem;
+			}
+			font-family: 'Raleway', sans-serif;
 			position: absolute;
 			width: $breakpoint;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
 			display: block;
-			font-size: 10rem;
 			text-align: center;
 			transition: .5s;
 		}
@@ -60,20 +121,20 @@ body {
 	#about {
 		position: relative;
 		min-height: 100vh;
-		padding-top: -60rem;
+		padding-top: 0rem;
 		#skew{
-			margin: 20vh 0;
+			margin: 0 0;
 			background-color: $grey;
-			transform: skew(0deg, -10deg);
+			transform: skew(0deg, 0deg);
 		}
 		#vision {
 			display: block;
 			width: 1000px;
-			padding: 20rem 0;
+			padding: 10rem 0;
 			margin: auto;
 			color: $white;
 			font-size: 2.5rem;
-			transform: skew(0deg, 10deg);
+			transform: skew(0deg, 0deg);
 			p {
 				font-size: 2.5rem;
 			}
