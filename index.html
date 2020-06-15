@@ -11,75 +11,40 @@
 		<title>Hope Is Rising</title>
 
 	  
-		<!-- <link
+		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/> -->
+		/>
 		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body data-spy="scroll" data-target=".navbar" id="home">
+	<body>
+
 		<!---------------------------------HEADER------------------------------------->
 		<header id="header">
-			<!-- <div class="container"> -->
-				<!-- <nav class="navbar navbar-expand-md navbar-dark"> -->
-					<a class="navbar-brand d-inline-block align-top" href="#home">
-						HOPE IS RISING
-					</a>
-					<!-- <button
-						class="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button> -->
-					<!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="#about">
-									ABOUT
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#featured">
-									FEATURED
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#logistics">
-									LOGISTICS
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#logistics">
-									FOOD
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#tickets">
-									TICKETS
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#map">
-									MAP
-								</a>
-							</li>
-						</ul>
-					<!-- </div> -->
-				<!-- </nav> -->
-			<!-- </div> -->
+			<a class="navbar-brand menu" href="#home">
+				HOPE IS RISING
+			</a>
+			<div id="myTopnav" class="topnav">
+					<a class="nav-link menu" href="#about">ABOUT</a>
+					<a class="nav-link menu" href="#featured">FEATURED</a>
+					<a class="nav-link menu" href="#logistics">LOGISTICS</a>
+					<a class="nav-link menu" href="#logistics">FOOD</a>
+					<a class="nav-link menu" href="#tickets">TICKETS</a>
+					<a class="nav-link menu" href="#map">MAP</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					  </a>
+					<!-- add collapsable https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+			</div>
 		</header>
-
-		<div id="body2">
+		<div id="hero"></div>
 			<!--------------------------------- HOME ------------------------------------->
-			<div id="home" class="parallax-wrapper">
+		<!-- <div id="content"> -->
+			<div id="home" class="section">
 				<div id="hope">
 					<h2 class="spray">
 						HOPE IS
@@ -91,7 +56,7 @@
 				</div>
 			</div>
 			<!--------------------------------- ABOUT ------------------------------------>
-			<div id="about" class="regular-wrapper section">
+			<div id="about" class="section">
 				<div id="skew">
 					<div id="vision">
 						NewCity Church, in collaboration with local community
@@ -156,6 +121,14 @@
 					to the order form from the food truck.
 				</p>
 			</div>
+			<div id="food" class="section">
+				Logistics
+				<p>
+					Maybe some images or charts and some explanation of how to enjoy the event.
+					We can include details here about the radio station to listen on, and a link
+					to the order form from the food truck.
+				</p>
+			</div>
 			<!--------------------------------- TICKETS ---------------------------------->
 			<div id="tickets" class="section">
 				Tickets 
@@ -177,7 +150,8 @@
 				</div>
 				<div id="google-map">
 					<div>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1475.2752031244156!2d-71.21641515597669!3d42.30945783592888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e382189d8d8e57%3A0xd64b17714bfa739e!2s275%20Needham%20St%20%23281%2C%20Newton%2C%20MA%2002464!5e0!3m2!1sen!2sus!4v1592014826478!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>				</div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1475.2752031244156!2d-71.21641515597669!3d42.30945783592888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e382189d8d8e57%3A0xd64b17714bfa739e!2s275%20Needham%20St%20%23281%2C%20Newton%2C%20MA%2002464!5e0!3m2!1sen!2sus!4v1592014826478!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>				
+					</div>
 				</div>
 	
 			</div>
@@ -185,19 +159,16 @@
 			<div id="sponsors">
 				<div class="myrow">
 					<a href="http://newcitychurch.cc">
-						<img src="images/newcitychurch.png" alt="New City Church">
+						<img src="images/NewCityChurch-Horizontal.png" alt="New City Church">
 					</a>
 					<a href="http://newcitychurch.cc">
-						<img src="images/newcitychurch.png" alt="New City Church">
+						<img src="images/Harmony Logo.png" alt="New City Church">
 					</a>
 					<a href="http://newcitychurch.cc">
-						<img src="images/newcitychurch.png" alt="New City Church">
+						<img src="images/Village Bank.png" alt="New City Church">
 					</a>
 					<a href="http://newcitychurch.cc">
-						<img src="images/newcitychurch.png" alt="New City Church">
-					</a>
-					<a href="http://newcitychurch.cc">
-						<img src="images/newcitychurch.png" alt="New City Church">
+						<img src="images/SNEMN.png" alt="New City Church">
 					</a>
 				</div>
 			</div>
@@ -208,8 +179,8 @@
 					INSERT CONTENT HERE FOR THE FOOTER. RANDOM THINGS FEEL MORE PROFESSIONAL
 				</div>
 			</footer>
+		<!-- </div> -->
 
-		</div>
 		<script src="js/script.js"></script>
 	</body>
 </html>

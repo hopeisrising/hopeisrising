@@ -1,7 +1,8 @@
 body {
   font-family: 'Fjalla One', sans-serif;
   font-size: 2rem;
-  color: #414141;
+  color: #ffffff;
+  margin: 0 0;
 }
 
 body p {
@@ -9,240 +10,357 @@ body p {
   font-size: 1.5rem;
 }
 
+body a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 body a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+body ul li {
+  margin: 0 .5rem;
+}
+
+html .active {
+  color: red;
+}
+
+#header {
+  background-color: #414141;
+  position: fixed;
+  display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 2rem 0rem black;
+          box-shadow: 0 0 2rem 0rem black;
+}
+
+#header a {
+  font-size: 2rem;
+}
+
+#header .navbar-brand {
+  margin: .5rem;
+}
+
+#header .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#header .navbar-nav a {
+  margin: .5rem;
+}
+
+#hero {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -100;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+  vertical-align: middle;
+  overflow-x: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#home #hope {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#home #hope .spray {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ceff22), to(#ceff22)), url(../images/spray.jpg);
+  background: linear-gradient(#ceff22, #ceff22), url(../images/spray.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: yellow;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#home #hope h2 {
+  font-size: 15.3rem;
+  margin: 0;
+}
+
+#home #hope h1 {
+  font-size: 18rem;
+  margin: -10.5rem 0 0 0;
+}
+
+#home #hope:hover {
+  color: #0fA89E;
+}
+
+#about {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 0rem;
+}
+
+#about #skew {
+  margin: 0 0;
+  background-color: rgba(0, 0, 0, 0.623);
+  -webkit-transform: skew(0deg, 0deg);
+          transform: skew(0deg, 0deg);
+}
+
+#about #vision {
+  display: block;
+  padding: 10rem 0;
+  margin: auto;
+  color: #ffffff;
+  font-size: 2.5rem;
+  -webkit-transform: skew(0deg, 0deg);
+          transform: skew(0deg, 0deg);
+}
+
+#about #vision p {
+  font-size: 2.5rem;
+}
+
+#featured {
+  padding-top: -10rem;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#featured .myrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem 0;
+  margin: 1rem;
+}
+
+#featured .mycard {
+  opacity: 1;
+  background-color: #ffffff;
+  color: #414141;
+  -webkit-box-shadow: 0 0 0 0 black;
+          box-shadow: 0 0 0 0 black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0 1rem;
+}
+
+#featured .mycard img {
+  opacity: 1;
+  width: 100%;
+}
+
+#featured .mycard .name {
+  margin: .5rem 1rem 0 1rem;
+}
+
+#featured .mycard:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#featured .feature-description {
+  padding: 2px 16px;
+  font-size: 1rem;
+}
+
+#logistics {
+  min-height: 60vh;
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 10rem;
+}
+
+#tickets {
+  padding-top: 10rem;
+  min-height: 60vh;
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#tickets #eventbrite {
+  display: block;
+  width: 22rem;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 4rem;
+  color: #414141;
+  margin: auto;
+}
+
+#tickets #eventbrite img {
+  display: inline-block;
+  height: 4rem;
+}
+
+#tickets #eventbrite div {
+  display: block;
+  padding: .2rem 1.5rem;
+}
+
+#tickets #eventbrite:hover {
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  color: #414141;
   text-decoration: none;
 }
 
-@media only screen and (min-width: 1000px) {
-  html {
-    overflow: hidden;
+#map {
+  padding-top: 10rem;
+  min-height: 80vh;
+  display: block;
+  max-width: 600px;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+#map #address {
+  margin-bottom: 2rem;
+}
+
+#map #google-map {
+  text-align: center;
+}
+
+#map #google-map div {
+  display: inline-block;
+}
+
+#sponsors {
+  max-width: 1000px;
+  margin: 5rem auto;
+}
+
+#sponsors .myrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#sponsors img {
+  height: 5rem;
+}
+
+#footer {
+  background-color: #414141;
+  color: #ffffff;
+}
+
+#footer .myrow {
+  margin: auto;
+  line-height: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
   }
-  html .active {
-    color: red;
-  }
-  html .navbar-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: horizontal;
-            flex-direction: horizontal;
-  }
-  body {
-    height: 100vh;
-    overflow-y: auto;
-  }
-  .parallax-wrapper {
-    width: 100vw;
-    height: 100vh;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  #header {
-    background-color: #414141;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  #header a {
-    font-size: 2rem;
-  }
-  #home {
-    position: relative;
-    height: 100vh;
-    vertical-align: middle;
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-  #home #hope {
-    font-family: 'Raleway', sans-serif;
-    position: absolute;
-    width: 1000px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  .topnav a.icon {
+    float: right;
     display: block;
-    text-align: center;
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-  #home #hope .spray {
-    background: -webkit-gradient(linear, left top, left bottom, from(#e5ff00), to(#e5ff00)), url(../images/spray.jpg);
-    background: linear-gradient(#e5ff00, #e5ff00), url(../images/spray.jpg);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    color: yellow;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  #home #hope h2 {
-    font-size: 16rem;
-  }
-  #home #hope h1 {
-    font-size: 18rem;
-    margin-top: -13rem;
-  }
-  #home #hope:hover {
-    color: #0fA89E;
-  }
-  #about {
-    position: relative;
-    min-height: 100vh;
-    padding-top: 0rem;
-  }
-  #about #skew {
-    margin: 0 0;
-    background-color: #414141;
-    -webkit-transform: skew(0deg, 0deg);
-            transform: skew(0deg, 0deg);
-  }
-  #about #vision {
-    display: block;
-    width: 1000px;
-    padding: 10rem 0;
-    margin: auto;
-    color: #ffffff;
-    font-size: 2.5rem;
-    -webkit-transform: skew(0deg, 0deg);
-            transform: skew(0deg, 0deg);
-  }
-  #about #vision p {
-    font-size: 2.5rem;
-  }
-  #featured {
-    padding-top: -10rem;
-    min-height: 100vh;
-  }
-  #featured .myrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: horizontal;
-            flex-direction: horizontal;
-    padding: 8rem 0;
-    margin: 5rem;
-  }
-  #featured .mycard {
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    margin: 0 1rem;
-  }
-  #featured .mycard img {
-    width: 100%;
-  }
-  #featured .mycard .name {
-    margin: .5rem 1rem 0 1rem;
-  }
-  #featured .mycard:hover {
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  #featured .feature-description {
-    padding: 2px 16px;
-    font-size: 1rem;
-  }
-  #logistics {
-    min-height: 60vh;
-    display: block;
-    max-width: 1000px;
-    margin: auto;
-    padding-top: 10rem;
-  }
-  #tickets {
-    padding-top: 10rem;
-    min-height: 60vh;
-    display: block;
-    max-width: 1000px;
-    margin: auto;
-  }
-  #tickets #eventbrite {
-    display: block;
-    width: 22rem;
-    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    -webkit-transition: .2s;
-    transition: .2s;
-    border-radius: 20px;
-    overflow: hidden;
-    font-size: 4rem;
-    color: #414141;
-    margin: auto;
-  }
-  #tickets #eventbrite img {
-    display: inline-block;
-    height: 4rem;
-  }
-  #tickets #eventbrite div {
-    display: block;
-    padding: .2rem 1.5rem;
-  }
-  #tickets #eventbrite:hover {
-    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    color: #414141;
-    text-decoration: none;
-  }
-  #map {
-    padding-top: 10rem;
-    min-height: 80vh;
-    display: block;
-    width: 600px;
-    margin: auto;
-  }
-  #map #address {
-    margin-bottom: 2rem;
-  }
-  #map #google-map {
-    text-align: center;
-  }
-  #map #google-map div {
-    display: inline-block;
-  }
-  #sponsors {
-    max-width: 1000px;
-    margin: 5rem auto;
-  }
-  #sponsors .myrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: horizontal;
-            flex-direction: horizontal;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  #sponsors img {
-    height: 5rem;
-  }
-  #footer {
-    background-color: #414141;
-    color: #ffffff;
-  }
-  #footer .myrow {
-    width: 1000px;
-    margin: auto;
-    line-height: 4rem;
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  #hope {
-    padding-top: 20vh;
-    font-size: 5rem;
-    text-align: center;
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
   }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

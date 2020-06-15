@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	// grab the sections (targets) and menu_links (triggers)
 	// for menu items to apply active link styles to
 	const sections = document.querySelectorAll(".section");
-	const menu_links = document.querySelectorAll(".nav-item");
+	const menu_links = document.querySelectorAll(".menu");
 	
 	// functions to add and remove the active class from links as appropriate
 	const makeActive = (link) => menu_links[link].classList.add("active");
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	// change the active link a bit above the actual section
 	// this way it will change as you're approaching the section rather
 	// than waiting until the section has passed the top of the screen
-	const sectionMargin = 200;
+	const sectionMargin = 0;
 	
 	// keep track of the currently active link
 	// use this so as not to change the active link over and over
@@ -51,3 +51,12 @@ document.addEventListener('DOMContentLoaded', function(){
 	  }
 	});
   }, false);
+
+  function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+	  x.className += " responsive";
+	} else {
+	  x.className = "topnav";
+	}
+  }
