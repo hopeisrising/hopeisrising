@@ -6,7 +6,7 @@ $greylight:#747474;
 $accent:#0fA89E;
 $yellow:#ceff22;
 $breakpoint:1000px;
-$red:#ff0000;
+$red:#ceff22;
 
 
 @keyframes TEXT_APPEAR {
@@ -47,7 +47,7 @@ body {
 
 html {
 	.active {
-		color: red;
+		color: $red;
 	}
 
 }

@@ -59,7 +59,7 @@ body ul li {
 }
 
 html .active {
-  color: red;
+  color: #ceff22;
 }
 
 html:not([data-scroll='0']) #header {
@@ -104,11 +104,11 @@ html:not([data-scroll='0']) #header {
 }
 
 .topnav a:hover {
-  color: #ff0000;
+  color: #ceff22;
 }
 
 .topnav a.active {
-  color: #ff0000;
+  color: #ceff22;
 }
 
 .topnav .icon {
