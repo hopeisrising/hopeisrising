@@ -34,7 +34,7 @@ html .active {
 }
 
 html:not([data-scroll='0']) #header {
-  background-color: #414141;
+  background-color: #1a1a1a;
   position: fixed;
   display: block;
   -webkit-box-pack: justify;
@@ -50,7 +50,7 @@ html:not([data-scroll='0']) #header {
 #header {
   -webkit-transition: .2s;
   transition: .2s;
-  background-color: #414141c7;
+  background-color: #1a1a1acc;
   position: fixed;
   display: block;
   -webkit-box-pack: justify;
@@ -70,6 +70,8 @@ html:not([data-scroll='0']) #header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .topnav a:hover {
@@ -163,6 +165,10 @@ html:not([data-scroll='0']) #header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #featured .feature-description {
@@ -171,9 +177,11 @@ html:not([data-scroll='0']) #header {
 }
 
 .mycard {
+  max-width: 300px;
+  display: block;
   background-color: #ffffff;
-  color: #414141;
-  margin: 1rem 0;
+  color: #1a1a1a;
+  margin: 1rem auto;
 }
 
 .mycard img {
@@ -197,7 +205,7 @@ html:not([data-scroll='0']) #header {
 #tickets {
   padding: 10rem 1rem;
   background-color: rgba(255, 255, 255, 0.9);
-  color: #414141;
+  color: #1a1a1a;
 }
 
 #tickets #eventbrite {
@@ -212,7 +220,7 @@ html:not([data-scroll='0']) #header {
   overflow: hidden;
   font-size: 4rem;
   margin: 1rem auto;
-  color: #414141;
+  color: #1a1a1a;
 }
 
 #tickets #eventbrite img {
@@ -228,7 +236,7 @@ html:not([data-scroll='0']) #header {
 #tickets #eventbrite:hover {
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  color: #414141;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
@@ -280,13 +288,34 @@ html:not([data-scroll='0']) #header {
 }
 
 #footer {
-  background-color: #414141;
-  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 5rem 3rem;
 }
 
 #footer .myrow {
-  margin: auto;
-  line-height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-width: 1000px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#footer .myrow .footerchunk {
+  width: 200px;
+  display: block;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+
+#footer .myrow .footerchunk span {
+  color: #ceff22;
 }
 
 @media screen and (max-width: 1000px) {
@@ -315,11 +344,15 @@ html:not([data-scroll='0']) #header {
     display: block;
     text-align: left;
   }
-  .myrow {
+  #sponsors .myrow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #sponsors .myrow img {
+    display: block;
+    margin: .5rem auto;
   }
   h2 {
     font-size: 5rem;
