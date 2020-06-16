@@ -33,7 +33,7 @@ html .active {
   color: red;
 }
 
-#header {
+html:not([data-scroll='0']) #header {
   background-color: #414141;
   position: fixed;
   display: block;
@@ -47,31 +47,20 @@ html .active {
           box-shadow: 0 0 2rem 0rem black;
 }
 
-#header a {
-  font-size: 2rem;
-}
-
-#header .navbar-brand {
-  margin: .5rem;
-}
-
-#header .navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#header .navbar-nav a {
-  margin: .5rem;
-}
-
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+#header {
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #414141c7;
+  position: fixed;
+  display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 2rem 0rem black;
+          box-shadow: 0 0 2rem 0rem black;
 }
 
 .topnav a {
@@ -81,12 +70,10 @@ html .active {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  color: red;
 }
 
 .topnav a.active {
@@ -123,8 +110,8 @@ html .active {
   height: 100vh;
   vertical-align: middle;
   overflow-x: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 #home #hope {
@@ -147,7 +134,6 @@ html .active {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  color: #ceff22;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -310,6 +296,11 @@ html .active {
   .topnav a.icon {
     float: right;
     display: block;
+    color: #747474;
+    border: 1px solid #747474;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 6px 10px;
   }
   .topnav.responsive {
     position: relative;

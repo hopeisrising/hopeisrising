@@ -1,6 +1,8 @@
 $black:#000000;
 $white:#ffffff;
 $grey:#414141;
+$transparentgrey:#414141c7;
+$greylight:#747474;
 $accent:#0fA89E;
 $yellow:#ceff22;
 $breakpoint:1000px;
@@ -46,8 +48,24 @@ html {
 	}
 
 }
+html:not([data-scroll='0']) {
+	
+	
+	#header {
+		background-color: $grey;
+		position: fixed;
+		display: block;
+		justify-content: space-between;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+		box-shadow: 0 0 2rem 0rem rgba(0,0,0,1);
+	}
+	
+}
 #header {
-	background-color: $grey;
+	transition: .2s;
+	background-color: $transparentgrey;
 	position: fixed;
 	display: block;
 	justify-content: space-between;
@@ -55,23 +73,9 @@ html {
 	width: 100%;
 	z-index: 100;
 	box-shadow: 0 0 2rem 0rem rgba(0,0,0,1);
-	a {
-		font-size: 2rem;
-	}
-	.navbar-brand {
-		margin: .5rem;
-	}
-	.navbar-nav {
-		display: flex;
-		flex-direction: column;
-		a {
-			margin: .5rem;
-		}
-	}
 }
 .topnav {
-	background-color: #333;
-	overflow: hidden;
+	// overflow: hidden;
   }
 .topnav a {
 	float: left;
@@ -80,11 +84,9 @@ html {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 17px;
 }
 .topnav a:hover {
-	background-color: #ddd;
-	color: black;
+	color: $red;
 }
 .topnav a.active {
 	color: $red;
@@ -116,7 +118,7 @@ html {
 	vertical-align: middle;
 	overflow-x: hidden;
 	// animation: TEXT_APPEAR 3s;
-	transition: .5s;
+	transition: .1s;
 	#hope {
 		.spray {
 			background: linear-gradient($yellow, $yellow), url(../images/Spray.jpg);
@@ -124,13 +126,11 @@ html {
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
-			color: $yellow;
+			// color: $yellow;
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 			background-clip: text;
-
 		}
-
 		font-family: 'Roboto', sans-serif;
 		position: absolute;
 		// width: $breakpoint;
@@ -268,10 +268,17 @@ html {
 }	
 
 @media screen and (max-width: $breakpoint) {
-	.topnav a:not(:first-child) {display: none;}
+	.topnav a:not(:first-child) {
+		display: none;
+	}
 	.topnav a.icon {
 		float: right;
 		display: block;
+		color: $greylight;
+		border: 1px solid $greylight;
+		border-radius: 10px;
+		margin: 7px;
+		padding: 6px 10px;
 	}
 	.topnav.responsive {position: relative;}
 	.topnav.responsive a.icon {
