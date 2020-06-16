@@ -119,15 +119,14 @@ html:not([data-scroll='0']) {
 	transition: .1s;
 	#hope {
 		.spray {
-			background:  linear-gradient($yellow, $yellow), url(../images/Spray.png);
-			background-blend-mode: multiply;
+			background: url(../images/Spray.png);
+			background-size: 99%;
 			background-repeat: no-repeat;
 			background-position: center center;
-			background-size: cover;
-			color: rgba(0,0,0,0);
-			// -webkit-text-fill-color: transparent;
+			color: $yellow;
+			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
-			// background-clip: text;
+			background-clip: text;
 		}
 		font-family: 'Roboto', sans-serif;
 		position: absolute;
