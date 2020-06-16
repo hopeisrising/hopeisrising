@@ -6,20 +6,23 @@ $greylight:#747474;
 $accent:#0fA89E;
 $yellow:#ceff22;
 $breakpoint:1000px;
-$red:red;
+$red:#ff0000;
 
 
-// @keyframes TEXT_APPEAR {
-// 	0% {opacity: 0;}
-// 	30% {opacity: 0;}
-// 	100% {opacity: 1;}
-// }
+@keyframes TEXT_APPEAR {
+	0% {opacity: 0;}
+	30% {opacity: 0;}
+	100% {opacity: 1;}
+}
 
 body {
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 2rem;
 	color: $white;
 	margin: 0 0;
+	opacity: 1;
+	animation-name: TEXT_APPEAR;
+	animation-duration: 2s;
 	p {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 1.5rem;
@@ -115,7 +118,6 @@ html:not([data-scroll='0']) {
 	height: 100vh;
 	vertical-align: middle;
 	overflow-x: hidden;
-	// animation: TEXT_APPEAR 3s;
 	transition: .1s;
 	#hope {
 		.spray {
@@ -224,21 +226,8 @@ html:not([data-scroll='0']) {
 		margin: 2rem auto;
 	}
 	#google-map {
-		max-width: 600px;
 		margin: auto;
-		text-align: center;
-		overflow:hidden;
-		padding-bottom:56.25%;
 		position:relative;
-		height:0;
-		iframe {
-			left:0;
-			top:0;
-			height:100%;
-			width:100%;
-			position:absolute;
-		}
-		
 	}
 }
 #sponsors {
@@ -316,6 +305,22 @@ html:not([data-scroll='0']) {
 		font-size: 6rem;
 		margin: -5rem 0 0 0;
 	}
+	#google-map {
+		max-width: 600px;
+		margin: auto;
+		text-align: center;
+		overflow:hidden;
+		padding-bottom:56.25%;
+		position:relative;
+		height:0;
+		iframe {
+			left:0;
+			top:0;
+			height:100%;
+			width:100%;
+			position:absolute;
+		}
+	}
 }
 @media screen and (min-width: $breakpoint) {
 	h2 {
@@ -333,5 +338,8 @@ html:not([data-scroll='0']) {
 	}
 	.mycard:hover {
 		box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+	}
+	#google-map {
+		width: 600px;
 	}
 }

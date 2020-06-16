@@ -1,8 +1,37 @@
+@-webkit-keyframes TEXT_APPEAR {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes TEXT_APPEAR {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Fjalla One', sans-serif;
   font-size: 2rem;
   color: #ffffff;
   margin: 0 0;
+  opacity: 1;
+  -webkit-animation-name: TEXT_APPEAR;
+          animation-name: TEXT_APPEAR;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 body p {
@@ -75,11 +104,11 @@ html:not([data-scroll='0']) #header {
 }
 
 .topnav a:hover {
-  color: red;
+  color: #ff0000;
 }
 
 .topnav a.active {
-  color: red;
+  color: #ff0000;
 }
 
 .topnav .icon {
@@ -246,21 +275,8 @@ html:not([data-scroll='0']) #header {
 }
 
 #map #google-map {
-  max-width: 600px;
   margin: auto;
-  text-align: center;
-  overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
-  height: 0;
-}
-
-#map #google-map iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
 }
 
 #sponsors {
@@ -357,6 +373,22 @@ html:not([data-scroll='0']) #header {
     font-size: 6rem;
     margin: -5rem 0 0 0;
   }
+  #google-map {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  #google-map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -378,6 +410,9 @@ html:not([data-scroll='0']) #header {
   .mycard:hover {
     -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+  #google-map {
+    width: 600px;
   }
 }
 /*# sourceMappingURL=style.css.map */
