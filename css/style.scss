@@ -4,7 +4,7 @@ $grey:rgb(26, 26, 26);
 $transparentgrey:rgba(26, 26, 26, 0.8);
 $transparentwhite:rgba(255, 255, 255, 0.8);
 $shadow: rgba(0, 0, 0, 0.459);
-$greylight:rgb(116, 116, 116);
+$greylight:rgb(226, 226, 226);
 $accent:rgb(15, 168, 158);
 $yellow:rgb(206, 255, 34);
 $breakpoint:1000px;
@@ -20,7 +20,7 @@ body {
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 1.5rem;
 	// letter-spacing: .1rem;
-	color: $white;
+	color: $greylight;
 	margin: 0 0;
 	opacity: 1;
 	animation-name: TEXT_APPEAR;
@@ -30,25 +30,29 @@ body {
 		font-size: 4rem;}
 	p {
 		// font-family: 'Open Sans', sans-serif;
-		// font-family: 'Montserrat', sans-serif;
-		font-family: proxima-nova, sans-serif;
+		font-family: 'Montserrat', sans-serif;
+		// font-family: proxima-nova, sans-serif;
 		font-style: normal;
 		font-weight: 300;
-		line-height: 1.7em;
+		line-height: 2em;
 		font-size: 1rem;
 		letter-spacing: 0;
 		margin: 0;
 		b {
 			font-weight: 600;
+			letter-spacing: .1em;
 		}
+	}
+	#when {
+		letter-spacing: .1em;
 	}
 	a {
 		text-decoration: none;
-		color: $white;
+		color: $greylight;
 	}
 	a:hover {
 		text-decoration: none;
-		color: $white;
+		color: $greylight;
 	}
 	ul {
 		list-style-type: none;
@@ -94,7 +98,7 @@ html:not([data-scroll='0']) {
 .topnav a {
 	float: left;
 	display: block;
-	color: #f2f2f2;
+	color: $greylight;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -178,7 +182,7 @@ html:not([data-scroll='0']) {
 	#vision {
 
 		display: block;
-		color: $white;
+		color: $greylight;
 		p {
 			max-width: 600px;
 			margin: auto;
@@ -321,7 +325,7 @@ html:not([data-scroll='0']) {
 			display: block;
 			font-size: 1rem;
 			line-height: 2.5rem;
-			color: $white;
+			color: $greylight;
 		}
 	}
 }	
