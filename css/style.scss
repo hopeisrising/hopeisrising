@@ -133,8 +133,9 @@ html:not([data-scroll='0']) {
 		left: 50%;
 		transform: translate(-50%,-50%);
 		z-index: 1;
-		img {
+		#hopeisrising {
 			display: block;
+			margin-bottom: 4rem;
 			max-width: 100%;
 		}
 		.myrow {
@@ -144,13 +145,17 @@ html:not([data-scroll='0']) {
 			justify-content: center;
 		}
 		.engage {
-			display: inline-block;
+			display: block;
+			width: 10rem;
+			padding: .5rem;
 			color: $grey;
 			background-color: rgba(255,255,255,.4);
-			padding: .5rem 1rem;
-			margin: 4rem 1rem;
 			font-size: 2rem;
 			transition: 250ms;
+			img {
+				padding-left: .5rem;
+				height: 1.7rem;
+			}
 		}
 		.engage:hover {
 			background-color: $transparentwhite;
@@ -164,8 +169,14 @@ html:not([data-scroll='0']) {
 	padding: 10rem 1rem;
 	background-color: $transparentgrey;
 	#vision {
+
 		display: block;
 		color: $white;
+		p {
+			max-width: 600px;
+			margin: auto;
+			text-align: left;
+		}
 
 	}
 
@@ -215,7 +226,7 @@ html:not([data-scroll='0']) {
 }
 #logistics {
 	display: block;
-	padding: 10rem 0 0;
+	padding-top: 10rem;
 	background-color: $transparentgrey;
 	p {
 		max-width: 600px;
@@ -225,7 +236,8 @@ html:not([data-scroll='0']) {
 }
 #food {
 	display: block;
-	padding: 10rem 0;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 	background-color: $transparentgrey;
 	p {
 		max-width: 600px;
@@ -234,8 +246,7 @@ html:not([data-scroll='0']) {
 	}
 }
 #tickets {
-	min-height: 100vh;
-	padding-top: 35vh;
+	height: 100vh;
 	background-color: $transparentwhite;
 	color: $grey;
 
@@ -245,15 +256,12 @@ html:not([data-scroll='0']) {
 		box-shadow: 0 0 .3rem $shadow;
 		transition: 150ms;
 		overflow: hidden;
-		margin: 1rem auto;
+		margin:40vh auto 1rem;
 		color: $grey;
 		border: none;
-		font-family: 'fjalla one';
-		padding: .5rem 2rem;
 		img {
 			display: inline-block;
 			margin-left: .5rem;
-			height: 7.3rem;
 		}
 	}
 	#number2-109422218802:hover {
@@ -266,7 +274,6 @@ html:not([data-scroll='0']) {
 #map {
 	padding: 5rem 1rem;
 	background-color: $transparentgrey;
-	min-height: 80vh;
 	#address {
 		max-width: 600px;
 		margin: 2rem auto;
@@ -302,9 +309,10 @@ html:not([data-scroll='0']) {
 			span {
 				color: $yellow;
 			}
+			text-align: left;
 			width: 200px;
 			display: block;
-			font-size: .7rem;
+			font-size: 1rem;
 			line-height: 2.5rem;
 			color: $white;
 		}
@@ -335,6 +343,17 @@ html:not([data-scroll='0']) {
 		display: block;
 		text-align: left;
 	}
+	#home {
+		#hope {
+			width: 80vw;
+		}
+		.myrow {
+			flex-direction: column;
+			.engage {
+				margin: 1rem auto;
+			}
+		}
+	}
 	#sponsors {
 		.myrow {
 			flex-direction: column;
@@ -344,20 +363,14 @@ html:not([data-scroll='0']) {
 			}
 		}
 	}
-	h2 {
-		font-size: 5rem;
-		margin: 0;
-	}
-	h1 {
-		font-size: 6rem;
-		margin: -5rem 0 0 0;
-	}
+
 	.mycard {
 		min-width: 80%;
 	}
 
 	#number2-109422218802 {
 		font-size: 3rem;
+		padding: .3rem 1rem 0;
 		img {
 			height: 2.5rem;
 		}
@@ -380,13 +393,8 @@ html:not([data-scroll='0']) {
 	}
 }
 @media screen and (min-width: $breakpoint) {
-	h2 {
-		font-size: 15.3rem;
-		margin: 0;
-	}
-	h1 {
-		font-size: 18rem;
-		margin: -10.5rem 0 0 0;
+	.engage {
+		margin: 1rem;
 	}
 	.mycard {
 		min-width: 30%;
@@ -401,9 +409,10 @@ html:not([data-scroll='0']) {
 		width: 600px;
 	}
 	#number2-109422218802 {
-		font-size: 3rem;
+		font-size: 8rem;
+		padding: 1rem 2rem;
 		img {
-			height: 2.5rem;
+			height: 6.7rem;
 		}
 	}
 }

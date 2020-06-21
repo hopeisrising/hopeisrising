@@ -161,8 +161,9 @@ html:not([data-scroll='0']) #header {
   z-index: 1;
 }
 
-#home #hope img {
+#home #hope #hopeisrising {
   display: block;
+  margin-bottom: 4rem;
   max-width: 100%;
 }
 
@@ -178,14 +179,19 @@ html:not([data-scroll='0']) #header {
 }
 
 #home #hope .engage {
-  display: inline-block;
+  display: block;
+  width: 10rem;
+  padding: .5rem;
   color: #1a1a1a;
   background-color: rgba(255, 255, 255, 0.4);
-  padding: .5rem 1rem;
-  margin: 4rem 1rem;
   font-size: 2rem;
   -webkit-transition: 250ms;
   transition: 250ms;
+}
+
+#home #hope .engage img {
+  padding-left: .5rem;
+  height: 1.7rem;
 }
 
 #home #hope .engage:hover {
@@ -203,6 +209,12 @@ html:not([data-scroll='0']) #header {
 #about #vision {
   display: block;
   color: #ffffff;
+}
+
+#about #vision p {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
 }
 
 #featured {
@@ -261,7 +273,7 @@ html:not([data-scroll='0']) #header {
 
 #logistics {
   display: block;
-  padding: 10rem 0 0;
+  padding-top: 10rem;
   background-color: #1a1a1acc;
 }
 
@@ -273,7 +285,8 @@ html:not([data-scroll='0']) #header {
 
 #food {
   display: block;
-  padding: 10rem 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   background-color: #1a1a1acc;
 }
 
@@ -284,8 +297,7 @@ html:not([data-scroll='0']) #header {
 }
 
 #tickets {
-  min-height: 100vh;
-  padding-top: 35vh;
+  height: 100vh;
   background-color: #ffffffcc;
   color: #1a1a1a;
 }
@@ -298,17 +310,14 @@ html:not([data-scroll='0']) #header {
   -webkit-transition: 150ms;
   transition: 150ms;
   overflow: hidden;
-  margin: 1rem auto;
+  margin: 40vh auto 1rem;
   color: #1a1a1a;
   border: none;
-  font-family: 'fjalla one';
-  padding: .5rem 2rem;
 }
 
 #tickets #number2-109422218802 img {
   display: inline-block;
   margin-left: .5rem;
-  height: 7.3rem;
 }
 
 #tickets #number2-109422218802:hover {
@@ -322,7 +331,6 @@ html:not([data-scroll='0']) #header {
 #map {
   padding: 5rem 1rem;
   background-color: #1a1a1acc;
-  min-height: 80vh;
 }
 
 #map #address {
@@ -375,9 +383,10 @@ html:not([data-scroll='0']) #header {
 }
 
 #footer .myrow .footerchunk {
+  text-align: left;
   width: 200px;
   display: block;
-  font-size: .7rem;
+  font-size: 1rem;
   line-height: 2.5rem;
   color: #ffffff;
 }
@@ -412,6 +421,18 @@ html:not([data-scroll='0']) #header {
     display: block;
     text-align: left;
   }
+  #home #hope {
+    width: 80vw;
+  }
+  #home .myrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #home .myrow .engage {
+    margin: 1rem auto;
+  }
   #sponsors .myrow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -422,19 +443,12 @@ html:not([data-scroll='0']) #header {
     display: block;
     margin: .5rem auto;
   }
-  h2 {
-    font-size: 5rem;
-    margin: 0;
-  }
-  h1 {
-    font-size: 6rem;
-    margin: -5rem 0 0 0;
-  }
   .mycard {
     min-width: 80%;
   }
   #number2-109422218802 {
     font-size: 3rem;
+    padding: .3rem 1rem 0;
   }
   #number2-109422218802 img {
     height: 2.5rem;
@@ -458,13 +472,8 @@ html:not([data-scroll='0']) #header {
 }
 
 @media screen and (min-width: 1000px) {
-  h2 {
-    font-size: 15.3rem;
-    margin: 0;
-  }
-  h1 {
-    font-size: 18rem;
-    margin: -10.5rem 0 0 0;
+  .engage {
+    margin: 1rem;
   }
   .mycard {
     min-width: 30%;
@@ -482,10 +491,11 @@ html:not([data-scroll='0']) #header {
     width: 600px;
   }
   #number2-109422218802 {
-    font-size: 3rem;
+    font-size: 8rem;
+    padding: 1rem 2rem;
   }
   #number2-109422218802 img {
-    height: 2.5rem;
+    height: 6.7rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
