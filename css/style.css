@@ -207,7 +207,7 @@ html:not([data-scroll='0']) #header {
 }
 
 #home #hope .engage:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   color: #1a1a1a;
   cursor: pointer;
 }
