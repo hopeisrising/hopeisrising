@@ -1,14 +1,13 @@
 $black:#000000;
-$white:#ffffff;
-$grey:#1a1a1a;
-$transparentgrey:#1a1a1acc;
-$transparentwhite:#ffffffcc;
-$shadow: #00000075;
-$greylight:#747474;
-$accent:#0fA89E;
-$yellow:#ceff22;
+$white:rgb(255, 255, 255);
+$grey:rgb(26, 26, 26);
+$transparentgrey:rgba(26, 26, 26, 0.8);
+$transparentwhite:rgba(255, 255, 255, 0.8);
+$shadow: rgba(0, 0, 0, 0.459);
+$greylight:rgb(116, 116, 116);
+$accent:rgb(15, 168, 158);
+$yellow:rgb(206, 255, 34);
 $breakpoint:1000px;
-$red:#ceff22;
 
 
 @keyframes TEXT_APPEAR {
@@ -30,10 +29,18 @@ body {
 		font-weight: 400;
 		font-size: 4rem;}
 	p {
-		font-family: 'Open Sans', sans-serif;
+		// font-family: 'Open Sans', sans-serif;
+		// font-family: 'Montserrat', sans-serif;
+		font-family: proxima-nova, sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1.7em;
 		font-size: 1rem;
 		letter-spacing: 0;
 		margin: 0;
+		b {
+			font-weight: 600;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -54,7 +61,7 @@ body {
 
 html {
 	.active {
-		color: $red;
+		color: $yellow;
 	}
 
 }
@@ -94,10 +101,10 @@ html:not([data-scroll='0']) {
 	transition: .2s;
 }
 .topnav a:hover {
-	color: $red;
+	color: $yellow;
 }
 .topnav a.active {
-	color: $red;
+	color: $yellow;
 }
 .topnav .icon {
 	display: none;

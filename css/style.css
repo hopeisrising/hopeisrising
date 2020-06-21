@@ -25,7 +25,7 @@
 body {
   font-family: 'Fjalla One', sans-serif;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: white;
   margin: 0 0;
   opacity: 1;
   -webkit-animation-name: TEXT_APPEAR;
@@ -40,20 +40,27 @@ body h3 {
 }
 
 body p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.7em;
   font-size: 1rem;
   letter-spacing: 0;
   margin: 0;
 }
 
+body p b {
+  font-weight: 600;
+}
+
 body a {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 body a:hover {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
 }
 
 body ul {
@@ -85,7 +92,7 @@ html:not([data-scroll='0']) #header {
 #header {
   -webkit-transition: .2s;
   transition: .2s;
-  background-color: #1a1a1acc;
+  background-color: rgba(26, 26, 26, 0.8);
   position: fixed;
   display: block;
   -webkit-box-pack: justify;
@@ -195,7 +202,7 @@ html:not([data-scroll='0']) #header {
 }
 
 #home #hope .engage:hover {
-  background-color: #ffffffcc;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #1a1a1a;
   cursor: pointer;
 }
@@ -203,12 +210,12 @@ html:not([data-scroll='0']) #header {
 #about {
   position: relative;
   padding: 10rem 1rem;
-  background-color: #1a1a1acc;
+  background-color: rgba(26, 26, 26, 0.8);
 }
 
 #about #vision {
   display: block;
-  color: #ffffff;
+  color: white;
 }
 
 #about #vision p {
@@ -218,7 +225,7 @@ html:not([data-scroll='0']) #header {
 }
 
 #featured {
-  background-color: #ffffffcc;
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 5rem;
   color: #1a1a1a;
 }
@@ -236,7 +243,7 @@ html:not([data-scroll='0']) #header {
 #featured .myrow .mycard {
   max-width: 300px;
   display: block;
-  background-color: #ffffff;
+  background-color: white;
   color: #1a1a1a;
   margin: 1rem auto;
   position: relative;
@@ -274,7 +281,7 @@ html:not([data-scroll='0']) #header {
 #logistics {
   display: block;
   padding-top: 10rem;
-  background-color: #1a1a1acc;
+  background-color: rgba(26, 26, 26, 0.8);
 }
 
 #logistics p {
@@ -287,7 +294,7 @@ html:not([data-scroll='0']) #header {
   display: block;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  background-color: #1a1a1acc;
+  background-color: rgba(26, 26, 26, 0.8);
 }
 
 #food p {
@@ -298,15 +305,15 @@ html:not([data-scroll='0']) #header {
 
 #tickets {
   height: 100vh;
-  background-color: #ffffffcc;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #1a1a1a;
 }
 
 #tickets #number2-109422218802 {
   display: inline-block;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 0.3rem #00000075;
-          box-shadow: 0 0 0.3rem #00000075;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.459);
+          box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.459);
   -webkit-transition: 150ms;
   transition: 150ms;
   overflow: hidden;
@@ -321,8 +328,8 @@ html:not([data-scroll='0']) #header {
 }
 
 #tickets #number2-109422218802:hover {
-  -webkit-box-shadow: 0 0 1rem #00000075;
-          box-shadow: 0 0 1rem #00000075;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
   color: #1a1a1a;
   text-decoration: none;
   cursor: pointer;
@@ -330,7 +337,7 @@ html:not([data-scroll='0']) #header {
 
 #map {
   padding: 5rem 1rem;
-  background-color: #1a1a1acc;
+  background-color: rgba(26, 26, 26, 0.8);
 }
 
 #map #address {
@@ -345,7 +352,7 @@ html:not([data-scroll='0']) #header {
 
 #sponsors {
   padding: 5rem 1rem;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 #sponsors .myrow {
@@ -388,7 +395,7 @@ html:not([data-scroll='0']) #header {
   display: block;
   font-size: 1rem;
   line-height: 2.5rem;
-  color: #ffffff;
+  color: white;
 }
 
 #footer .myrow .footerchunk span {
@@ -478,14 +485,14 @@ html:not([data-scroll='0']) #header {
   .mycard {
     min-width: 30%;
     margin: 1rem;
-    -webkit-box-shadow: 0 0 0 0 #00000075;
-            box-shadow: 0 0 0 0 #00000075;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
     -webkit-transition: .2s;
     transition: .2s;
   }
   .mycard:hover {
-    -webkit-box-shadow: 0 0 1rem #00000075;
-            box-shadow: 0 0 1rem #00000075;
+    -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
   }
   #google-map {
     width: 600px;
