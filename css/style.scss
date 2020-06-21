@@ -206,6 +206,10 @@ html:not([data-scroll='0']) {
 			color: $grey;
 			margin: 1rem auto;
 			position: relative;
+			p {
+				line-height: 1.5;
+				margin-top: 1rem;
+			}
 			.profile {
 				width: 100%;
 				position: relative;

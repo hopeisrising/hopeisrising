@@ -254,6 +254,11 @@ html:not([data-scroll='0']) #header {
   position: relative;
 }
 
+#featured .myrow .mycard p {
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
 #featured .myrow .mycard .profile {
   width: 100%;
   position: relative;
