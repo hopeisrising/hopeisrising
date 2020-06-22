@@ -399,16 +399,30 @@ html:not([data-scroll='0']) #header {
           justify-content: space-evenly;
 }
 
-#footer .myrow .footerchunk {
+#footer .myrow #footerchunk1 {
   text-align: left;
-  width: 200px;
+  width: 300px;
+  display: block;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  color: #e2e2e2;
+  margin-bottom: 2rem;
+}
+
+#footer .myrow #footerchunk1 span {
+  color: #ceff22;
+}
+
+#footer .myrow #footerchunk2 {
+  text-align: left;
+  max-width: 300px;
   display: block;
   font-size: 1rem;
   line-height: 2.5rem;
   color: #e2e2e2;
 }
 
-#footer .myrow .footerchunk span {
+#footer .myrow #footerchunk2 span {
   color: #ceff22;
 }
 
