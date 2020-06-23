@@ -528,5 +528,31 @@ html:not([data-scroll='0']) #header {
   #number2-109422218802 img {
     height: 6.7rem;
   }
+  #footer a {
+    position: relative;
+  }
+  #footer a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e2e2e2;
+    left: 0;
+    bottom: -2px;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
+  }
+  #footer a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */
