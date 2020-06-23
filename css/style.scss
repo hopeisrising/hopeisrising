@@ -192,17 +192,18 @@ html:not([data-scroll='0']) {
 	}
 
 }
-#featured {
+#featuring {
 	background-color: $transparentwhite;
 	padding-top: 5rem;
 	color: $grey;
 	.myrow {
 		display: flex;
 		flex-flow: row wrap;
+		margin-bottom: 10rem;
 		.mycard {
 			max-width: 300px;
-			display: block;
 			background-color: $white;
+			display: block;
 			color: $grey;
 			margin: 1rem auto;
 			position: relative;
@@ -239,27 +240,6 @@ html:not([data-scroll='0']) {
 		font-size: 1rem;
 	}
 }
-#logistics {
-	display: block;
-	padding-top: 10rem;
-	background-color: $transparentgrey;
-	p {
-		max-width: 600px;
-		margin: auto;
-		text-align: left;
-	}
-}
-#food {
-	display: block;
-	padding-top: 10rem;
-	padding-bottom: 10rem;
-	background-color: $transparentgrey;
-	p {
-		max-width: 600px;
-		margin: auto;
-		text-align: left;
-	}
-}
 #tickets {
 	height: 100vh;
 	background-color: $transparentwhite;
@@ -284,6 +264,27 @@ html:not([data-scroll='0']) {
 		color: $grey;
 		text-decoration: none;
 		cursor: pointer;
+	}
+}
+#food {
+	display: block;
+	padding-top: 10rem;
+	background-color: $transparentgrey;
+	p {
+		max-width: 600px;
+		margin: auto;
+		text-align: left;
+	}
+}
+#logistics {
+	display: block;
+	padding-top: 10rem;
+	padding-bottom: 5rem;
+	background-color: $transparentgrey;
+	p {
+		max-width: 600px;
+		margin: auto;
+		text-align: left;
 	}
 }
 #map {

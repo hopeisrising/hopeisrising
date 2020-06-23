@@ -229,13 +229,13 @@ html:not([data-scroll='0']) #header {
   text-align: left;
 }
 
-#featured {
+#featuring {
   background-color: rgba(255, 255, 255, 0.8);
   padding-top: 5rem;
   color: #1a1a1a;
 }
 
-#featured .myrow {
+#featuring .myrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,74 +243,50 @@ html:not([data-scroll='0']) #header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  margin-bottom: 10rem;
 }
 
-#featured .myrow .mycard {
+#featuring .myrow .mycard {
   max-width: 300px;
-  display: block;
   background-color: white;
+  display: block;
   color: #1a1a1a;
   margin: 1rem auto;
   position: relative;
 }
 
-#featured .myrow .mycard p {
+#featuring .myrow .mycard p {
   line-height: 1.5;
   margin-top: 1rem;
 }
 
-#featured .myrow .mycard .profile {
+#featuring .myrow .mycard .profile {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-#featured .myrow .mycard .profile::after {
+#featuring .myrow .mycard .profile::after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
 
-#featured .myrow .mycard .profile img {
+#featuring .myrow .mycard .profile img {
   position: absolute;
   height: 100%;
   top: 0;
   left: 0;
 }
 
-#featured .myrow .mycard .name {
+#featuring .myrow .mycard .name {
   margin: 1rem 1rem 0 1rem;
 }
 
-#featured .feature-description {
+#featuring .feature-description {
   text-align: center;
   padding: 0 1rem 2rem 1rem;
   font-size: 1rem;
-}
-
-#logistics {
-  display: block;
-  padding-top: 10rem;
-  background-color: rgba(26, 26, 26, 0.8);
-}
-
-#logistics p {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-#food {
-  display: block;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-color: rgba(26, 26, 26, 0.8);
-}
-
-#food p {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
 }
 
 #tickets {
@@ -343,6 +319,31 @@ html:not([data-scroll='0']) #header {
   color: #1a1a1a;
   text-decoration: none;
   cursor: pointer;
+}
+
+#food {
+  display: block;
+  padding-top: 10rem;
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+#food p {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+#logistics {
+  display: block;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+#logistics p {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
 }
 
 #map {
