@@ -317,27 +317,7 @@ html:not([data-scroll='0']) {
 #footer {
 	background-color: $grey;
 	padding: 5rem 3rem;
-	a {
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: -2px;
-			left: 0;
-			background-color: $greylight;
-			width: 100%;
-			height: 1px;
-			transform: scaleX(0);
-			transform-origin: right;
-			transition: transform 250ms;
-		}
-	}
-	a:hover::after {
-		transform: scaleX(1);
-		transform-origin: left;
-	}
 	.myrow {
-
 		display: flex;
 		flex-flow: row wrap;
 		max-width: $breakpoint;
