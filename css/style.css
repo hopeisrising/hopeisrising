@@ -157,7 +157,7 @@ html:not([data-scroll='0']) #header {
 
 #home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   vertical-align: middle;
   overflow-x: hidden;
   -webkit-transition: .1s;
