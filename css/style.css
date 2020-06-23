@@ -247,8 +247,6 @@ html:not([data-scroll='0']) #header {
 }
 
 #featuring .myrow .mycard {
-  max-width: 300px;
-  margin: 1rem auto;
   background-color: white;
   display: block;
   color: #1a1a1a;
@@ -476,7 +474,8 @@ html:not([data-scroll='0']) #header {
     margin: .5rem auto;
   }
   .mycard {
-    min-width: 90%;
+    width: 100%;
+    margin: 1rem 0;
   }
   #number2-109422218802 {
     font-size: 3rem;
@@ -508,8 +507,8 @@ html:not([data-scroll='0']) #header {
     margin: 1rem;
   }
   .mycard {
-    min-width: 30%;
-    margin: 1rem;
+    width: 300px;
+    margin: 1rem auto;
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
     -webkit-transition: .2s;
