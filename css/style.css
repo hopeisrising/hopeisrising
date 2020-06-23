@@ -325,10 +325,24 @@ html:not([data-scroll='0']) #header {
   background-color: rgba(26, 26, 26, 0.8);
 }
 
-#food p {
+#food #french {
   max-width: 600px;
   margin: auto;
   text-align: left;
+}
+
+#food #french #press {
+  margin-bottom: 1rem;
+}
+
+#food #french img {
+  padding: 1rem;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#food #french #link {
+  margin: 1rem 0;
 }
 
 #logistics {
@@ -477,6 +491,13 @@ html:not([data-scroll='0']) #header {
     width: 100%;
     margin: 1rem 0;
   }
+  #food img {
+    margin: 0.5rem 0 .5rem 1rem;
+  }
+  #food #link {
+    display: block;
+    text-align: center;
+  }
   #number2-109422218802 {
     font-size: 3rem;
     padding: .3rem 1rem 0;
@@ -518,6 +539,9 @@ html:not([data-scroll='0']) #header {
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
             box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
   }
+  #food img {
+    margin: 3rem 0 0 1rem;
+  }
   #google-map {
     width: 600px;
   }
@@ -527,6 +551,32 @@ html:not([data-scroll='0']) #header {
   }
   #number2-109422218802 img {
     height: 6.7rem;
+  }
+  #french a {
+    position: relative;
+  }
+  #french a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #e2e2e2;
+    left: 0;
+    bottom: -2px;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
+  }
+  #french a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   #footer a {
     position: relative;

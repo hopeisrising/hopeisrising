@@ -268,10 +268,22 @@ html:not([data-scroll='0']) {
 	display: block;
 	padding-top: 10rem;
 	background-color: $transparentgrey;
-	p {
+	#french {
+
 		max-width: 600px;
 		margin: auto;
 		text-align: left;
+		#press {
+			margin-bottom: 1rem;
+		}
+		img {
+			padding: 1rem;
+			float: right;
+			background-color: $transparentwhite;
+		}
+		#link {
+			margin: 1rem 0;
+		}
 	}
 }
 #logistics {
@@ -336,7 +348,6 @@ html:not([data-scroll='0']) {
 			span {
 				color: $yellow;
 			}
-			// text-transform: uppercase;
 			text-align: left;
 			max-width: 300px;
 			display: block;
@@ -397,6 +408,15 @@ html:not([data-scroll='0']) {
 		margin: 1rem 0;
 		
 	}
+	#food {
+		img {
+			margin: 0.5rem 0 .5rem 1rem;
+		}
+		#link {
+			display: block;
+			text-align: center;
+		}
+	}
 
 	#number2-109422218802 {
 		font-size: 3rem;
@@ -435,6 +455,11 @@ html:not([data-scroll='0']) {
 	.mycard:hover {
 		box-shadow: 0 0 1rem $shadow;
 	}
+	#food {
+		img {
+			margin: 3rem 0 0 1rem;
+		}
+	}
 	#google-map {
 		width: 600px;
 	}
@@ -443,6 +468,27 @@ html:not([data-scroll='0']) {
 		padding: 1rem 2rem;
 		img {
 			height: 6.7rem;
+		}
+	}
+	#french {
+		a {
+			position: relative;
+		}
+		a::after {
+			content: "";
+			position: absolute;
+			height: 1px;
+			width: 100%;
+			background-color: $greylight;
+			left: 0;
+			bottom: -2px;
+			transform: scaleX(0);
+			transform-origin: right;
+			transition: transform 250ms;
+		}
+		a:hover::after {
+			transform: scaleX(1);
+			transform-origin: left;
 		}
 	}
 	#footer {
