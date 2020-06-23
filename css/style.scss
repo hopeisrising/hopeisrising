@@ -202,10 +202,10 @@ html:not([data-scroll='0']) {
 		margin-bottom: 10rem;
 		.mycard {
 			max-width: 300px;
+			margin: 1rem auto;
 			background-color: $white;
 			display: block;
 			color: $grey;
-			margin: 1rem auto;
 			position: relative;
 			p {
 				line-height: 1.5;
@@ -311,6 +311,7 @@ html:not([data-scroll='0']) {
 	img {
 		max-height: 5rem;
 		max-width: 100%;
+	
 	}
 }
 #footer {
@@ -414,7 +415,8 @@ html:not([data-scroll='0']) {
 	}
 
 	.mycard {
-		min-width: 80%;
+		min-width: 90%;
+		
 	}
 
 	#number2-109422218802 {
