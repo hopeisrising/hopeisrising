@@ -284,6 +284,13 @@ html:not([data-scroll='0']) {
 		#link {
 			margin: 1rem 0;
 		}
+		#orderfood {
+			display: inline-block;
+			color: $grey;
+			background-color: $transparentwhite;
+			padding: 1rem 2rem;
+			margin-top: 1.5rem;
+		}
 	}
 }
 #logistics {

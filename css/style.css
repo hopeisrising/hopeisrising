@@ -345,6 +345,14 @@ html:not([data-scroll='0']) #header {
   margin: 1rem 0;
 }
 
+#food #french #orderfood {
+  display: inline-block;
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
 #logistics {
   display: block;
   padding-top: 10rem;
