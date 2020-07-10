@@ -34,11 +34,6 @@ body {
           animation-duration: 2s;
 }
 
-body h3 {
-  font-weight: 400;
-  font-size: 4rem;
-}
-
 body p {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -246,16 +241,76 @@ html:not([data-scroll='0']) #header {
   margin-bottom: 10rem;
 }
 
+#featuring .myrow .devcard {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #1a1a1a;
+  position: relative;
+  width: 100%;
+}
+
+#featuring .myrow .devcard .devrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#featuring .myrow .devcard .profile {
+  position: relative;
+}
+
+#featuring .myrow .devcard .profile::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#featuring .myrow .devcard .profile img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#featuring .myrow .devcard .quote {
+  font-size: .7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-align: left;
+  margin: 0 2rem;
+  line-height: 1.2rem;
+}
+
+#featuring .myrow .devcard .quote::before {
+  color: #b3b3b3;
+  vertical-align: -.6rem;
+  line-height: .7rem;
+  font-size: 2rem;
+  content: open-quote;
+}
+
+#featuring .myrow .devcard .quote::after {
+  color: #b3b3b3;
+  line-height: .7rem;
+  vertical-align: -.6rem;
+  font-size: 2rem;
+  content: close-quote;
+}
+
+#featuring .myrow p {
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: 0 1rem 2rem 1rem;
+  font-size: 1rem;
+}
+
 #featuring .myrow .mycard {
   background-color: white;
   display: block;
   color: #1a1a1a;
   position: relative;
-}
-
-#featuring .myrow .mycard p {
-  line-height: 1.5;
-  margin-top: 1rem;
 }
 
 #featuring .myrow .mycard .profile {
@@ -279,12 +334,6 @@ html:not([data-scroll='0']) #header {
 
 #featuring .myrow .mycard .name {
   margin: 1rem 1rem 0 1rem;
-}
-
-#featuring .feature-description {
-  text-align: center;
-  padding: 0 1rem 2rem 1rem;
-  font-size: 1rem;
 }
 
 #tickets {
@@ -323,6 +372,7 @@ html:not([data-scroll='0']) #header {
   display: block;
   padding-top: 10rem;
   background-color: rgba(26, 26, 26, 0.8);
+  overflow: hidden;
 }
 
 #food #french {
@@ -345,12 +395,45 @@ html:not([data-scroll='0']) #header {
   margin: 1rem 0;
 }
 
+#food #french #link .no-underline:hover::after {
+  content: none;
+}
+
 #food #french #orderfood {
   display: inline-block;
   color: #1a1a1a;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem 2rem;
   margin-top: 1.5rem;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+}
+
+#food #french #orderfood:hover {
+  background-color: white;
+}
+
+#media_station {
+  display: block;
+  padding-top: 10rem;
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+#media_station #media {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+#media_station #media #station {
+  margin-bottom: 1rem;
+}
+
+#media_station #media img {
+  padding: 1rem;
+  float: right;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #logistics {
@@ -397,8 +480,9 @@ html:not([data-scroll='0']) #header {
 }
 
 #sponsors img {
-  max-height: 5rem;
+  height: 4rem;
   max-width: 100%;
+  margin: 1rem;
 }
 
 #footer {
@@ -420,9 +504,9 @@ html:not([data-scroll='0']) #header {
           justify-content: space-evenly;
 }
 
-#footer .myrow #footerchunk1 {
+#footer .myrow .footerchunk {
   text-align: left;
-  width: 300px;
+  width: 280px;
   display: block;
   font-size: 1rem;
   line-height: 2.5rem;
@@ -430,24 +514,15 @@ html:not([data-scroll='0']) #header {
   margin-bottom: 2rem;
 }
 
-#footer .myrow #footerchunk1 span {
-  color: #ceff22;
-}
-
-#footer .myrow #footerchunk2 {
-  text-align: left;
-  max-width: 300px;
-  display: block;
-  font-size: 1rem;
-  line-height: 2.5rem;
-  color: #e2e2e2;
-}
-
-#footer .myrow #footerchunk2 span {
+#footer .myrow .footerchunk span {
   color: #ceff22;
 }
 
 @media screen and (max-width: 1000px) {
+  h3 {
+    font-weight: 400;
+    font-size: 3rem;
+  }
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -499,12 +574,28 @@ html:not([data-scroll='0']) #header {
     width: 100%;
     margin: 1rem 0;
   }
+  .devcard {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .devcard .feature-description {
+    margin: 2rem 0;
+  }
+  .devrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #food img {
     margin: 0.5rem 0 .5rem 1rem;
   }
   #food #link {
     display: block;
     text-align: center;
+  }
+  #media_station img {
+    margin: 0.5rem 0 .5rem 1rem;
   }
   #number2-109422218802 {
     font-size: 3rem;
@@ -532,22 +623,58 @@ html:not([data-scroll='0']) #header {
 }
 
 @media screen and (min-width: 1000px) {
+  h3 {
+    font-weight: 400;
+    font-size: 4rem;
+  }
   .engage {
     margin: 1rem;
+  }
+  .devcard {
+    width: 300px;
+    margin: 1rem;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
+    -webkit-transition: 200ms;
+    transition: 200ms;
+  }
+  .devcard .devrow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .devcard .profile {
+    width: 300px;
+  }
+  .devcard .feature-description {
+    margin: 1.8rem auto;
+    display: block;
+    width: 668px;
+  }
+  .devcard:hover {
+    -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
   }
   .mycard {
     width: 300px;
     margin: 1rem auto;
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.459);
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: 200ms;
+    transition: 200ms;
   }
   .mycard:hover {
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
             box-shadow: 0 0 1rem rgba(0, 0, 0, 0.459);
   }
   #food img {
+    margin: 3rem 0 0 1rem;
+  }
+  #media_station img {
     margin: 3rem 0 0 1rem;
   }
   #google-map {
